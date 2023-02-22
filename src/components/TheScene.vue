@@ -3,6 +3,8 @@ import { ref } from 'vue';
 
 import TheCameraRig from './TheCameraRig.vue';
 import TheNavMesh from './TheNavMesh.vue';
+import TheLighting from './TheLighting.vue';
+import TheCabin from './TheCabin.vue';
 
 import '../aframe/clickable';
 
@@ -20,67 +22,51 @@ function toggleDoor() {
 </script>
 
 <template>
-<a-scene
-      background="color: black;"
-      renderer="colorManagement: true;"
-      :webxr="`
-        requiredFeatures: local-floor;
-        referenceSpaceType: local-floor;
-        optionalFeatures: dom-overlay;
-        overlayElement: ${overlaySelector};
-      `"
->
-  <a-assets @loaded="allAssetsLoaded = true">
-      <!--
-        Title: Small Cabin House
-        Model source: https://sketchfab.com/3d-models/small-cabin-house-9c17c12568314e849a990628e0f4931f
-        Model author: https://sketchfab.com/padmadev_designs
-        Model license: CC BY 4.0 ( https://creativecommons.org/licenses/by/4.0/ )
-      -->
-      <a-asset-item  id="cabin" src="assets/small_cabin_house.glb"></a-asset-item>
+  <a-scene
+        background="color: black;"
+        renderer="colorManagement: true;"
+        :webxr="`
+          requiredFeatures: local-floor;
+          referenceSpaceType: local-floor;
+          optionalFeatures: dom-overlay;
+          overlayElement: ${overlaySelector};
+        `"
+  >
+    <a-assets @loaded="allAssetsLoaded = true">
+        <!--
+          Title: Small Cabin House
+          Model source: https://sketchfab.com/3d-models/small-cabin-house-9c17c12568314e849a990628e0f4931f
+          Model author: https://sketchfab.com/padmadev_designs
+          Model license: CC BY 4.0 ( https://creativecommons.org/licenses/by/4.0/ )
+        -->
+        <a-asset-item  id="cabin" src="assets/small_cabin_house.glb"></a-asset-item>
+
+        <!--
+          Title: PS1/N64 Style Cupboard
+          Model source: https://sketchfab.com/3d-models/ps1n64-style-cupboard-f983dc1487c14d65a0e58ba251d6907a
+          Model author: https://sketchfab.com/jsandwich96
+          Model license: CC BY 4.0 ( https://creativecommons.org/licenses/by/4.0/ )
+        -->
+        <a-asset-item  id="closet" src="assets/low-poly_closet.glb"></a-asset-item>
+        <img id="wood-texture" src="assets/wooden_wall.jpeg">
     </a-assets>
-  <a-entity>
 
-    <a-entity
-      v-if="allAssetsLoaded"
-      gltf-model="#cabin"
-      position="0 0 -1"
-    >
-      <a-entity light="type: ambient; color: #fff; intensity: 0.02;" hide-in-vr></a-entity>
-      <a-entity light="type: point; color: #FFF; intensity: 0.02" position="0 1.5 -1" hide-in-vr></a-entity>
-      <a-entity light="type: ambient; color: #fff; intensity: 0.002;" hide-in-vr="hideInFlat3d: true; hideInAR: false;"></a-entity>
-      <a-entity light="type: point; color: #FFF; intensity: 0.002" position="0 1.5 -1" hide-in-vr="hideInFlat3d: true; hideInAR: false;"></a-entity>
-    </a-entity>
+    <template v-if="allAssetsLoaded">
 
-  </a-entity>
-  <!-- <a-entity>
+      <TheCabin/>
 
-
-
-    <a-plane position="0 1.5 -4" color="white" height="3" width="6"></a-plane>
-
-    <a-plane position="3 1.5 -1" color="white" height="3" width="6" rotation="0 -90 0">
-      <a-entity 
-        gltf-model="../assets/door.glb"
-        scale="0.01 0.01 0.01"
-        position="0 0.6 0"
-        clickable="color: red"
-        @click="toggleDoor"
+      <a-entity
+        gltf-model="#closet"
+        position="0 0 2.2"
+        rotation="0 90 0"
+        scale="0.06 0.06 0.06"
       ></a-entity>
-    </a-plane>
 
-    <a-plane position="-3 1.5 -1" color="white" height="3" width="6" rotation="0 90 0"></a-plane>
+    </template>
 
-    <a-plane position="0 1.5 2" color="white" height="3" width="6" rotation="0 180 0"></a-plane>
+    <TheLighting/>
 
-    <a-plane position="0 3 -1" color="white" height="6" width="6" rotation="90 0 0"></a-plane>
-
-    <a-plane position="0 0 -1" color="white" height="6" width="6" rotation="-90 0 0"></a-plane>
-
-    <a-plane position="0 0 -1" color="white" height="4.5" width="4.5" rotation="-90 0 0" data-role="nav-mesh"
-      visible="false"></a-plane>
-  </a-entity> -->
-
-  <TheCameraRig />
-</a-scene>
+    <TheCameraRig />
+    
+  </a-scene>
 </template>
