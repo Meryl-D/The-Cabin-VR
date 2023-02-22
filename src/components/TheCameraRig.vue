@@ -3,6 +3,8 @@
   import '../aframe/hide-in-vr';
   import '../aframe/simple-navmesh-constraint';
   import '../aframe/blink-controls';
+
+  import TheFlashLight from './TheFlashLight.vue';
 </script>
 
 <template>
@@ -19,18 +21,10 @@
       camera
       position="0 1.65 0"
     > 
-      <!-- Flashlight and light -->
-      <a-entity
+      <the-flash-light 
         hide-in-vr
-        gltf-model="../assets/simple_flashlight.glb"
-        position="0.2 -0.3 -0.3"
-        rotation="0 180 0"
-      >
-        <a-entity
-          rotation="0 180 0"
-          light="type: spot; angle: 30; penumbra: 1; intensity: 1; decay: 2; distance: 15;"
-        ></a-entity>
-      </a-entity>
+        position="0.2 -0.4 -0.4"
+      ></the-flash-light>
 
       <!-- Pointer -->
       <a-entity
@@ -62,16 +56,10 @@
       laser-controls="hand: right"
       raycaster="far: 2; objects: [clickable]; showLine: true;"
     >
-      <a-entity
-          gltf-model="../assets/simple_flashlight.glb"
-          position="-0.06 -0.12 -0.15"
-          rotation="0 180 0"
-        >
-          <a-entity
-            rotation="0 180 0"
-            light="type: spot; angle: 30; penumbra: 1; intensity: 1; decay: 2; distance: 15;"
-          ></a-entity>
-        </a-entity>
+      <the-flash-light
+        scale="0.7 0.7 0.7"
+        position="-0.03 -0.07 -0.12"
+      ></the-flash-light>
     </a-entity>
 
   </a-entity>

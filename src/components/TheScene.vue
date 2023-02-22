@@ -32,9 +32,9 @@ function toggleDoor() {
 >
   <a-assets @loaded="allAssetsLoaded = true">
       <!--
-        Title: VR Gallery
-        Model source: https://sketchfab.com/3d-models/vr-gallery-1ac32ed62fdf424498acc146fad31f7e
-        Model author: https://sketchfab.com/mvrc.art (Maxim Mavrichev)
+        Title: Small Cabin House
+        Model source: https://sketchfab.com/3d-models/small-cabin-house-9c17c12568314e849a990628e0f4931f
+        Model author: https://sketchfab.com/padmadev_designs
         Model license: CC BY 4.0 ( https://creativecommons.org/licenses/by/4.0/ )
       -->
       <a-asset-item  id="cabin" src="assets/small_cabin_house.glb"></a-asset-item>
@@ -46,8 +46,10 @@ function toggleDoor() {
       gltf-model="#cabin"
       position="0 0 -1"
     >
-      <a-entity light="type: ambient; color: #fff; intensity: 0.02;"></a-entity>
-      <a-entity light="type: point; color: #FFF; intensity: 0.02" position="0 1.5 -1"></a-entity>
+      <a-entity light="type: ambient; color: #fff; intensity: 0.02;" hide-in-vr></a-entity>
+      <a-entity light="type: point; color: #FFF; intensity: 0.02" position="0 1.5 -1" hide-in-vr></a-entity>
+      <a-entity light="type: ambient; color: #fff; intensity: 0.002;" hide-in-vr="hideInFlat3d: true; hideInAR: false;"></a-entity>
+      <a-entity light="type: point; color: #FFF; intensity: 0.002" position="0 1.5 -1" hide-in-vr="hideInFlat3d: true; hideInAR: false;"></a-entity>
     </a-entity>
 
   </a-entity>
