@@ -24,7 +24,7 @@
       <div class="licences">
         <dl>
           <dt>
-            <i>Included</i>
+            <i>Licences</i>
           </dt>
           <dt>
             <a href="https://github.com/c-frame/aframe-extras" target="_blank">aframe-extras controls and animation-mixer</a>
@@ -57,12 +57,16 @@
 </template>
 
 <style scoped>
-  h1 { font-size: 1.5rem }
+  h1 { 
+    font-size: 1.5rem;
+  }
   a {
     color: #eee;
     text-decoration: none;
   }
   .licences {
+    display: flex;
+    justify-content: center;
     margin: 2rem 0;
     font-size: 1rem;
     text-align: left;
@@ -104,7 +108,7 @@
     padding: 0.5rem 1rem;
     border-radius: 0.3rem;
     background-color: white;
-    color: black;
+    color: #333;
     border: none;
     cursor: pointer;
   }

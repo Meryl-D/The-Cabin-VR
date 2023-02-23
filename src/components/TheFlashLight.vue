@@ -4,7 +4,7 @@
 
 <template>
     <a-entity
-        gltf-model="../assets/simple_flashlight.glb"
+        gltf-model="../assets/models/simple_flashlight.glb"
         rotation="0 180 0"
     >
         <a-entity rotation="0 180 0"
