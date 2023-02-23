@@ -39,7 +39,7 @@ function toggleDoor() {
         Model author: https://sketchfab.com/vchalany (Vitek Chalany)
         Model license: CC BY 4.0 ( https://creativecommons.org/licenses/by/4.0/ )
       -->
-      <a-asset-item  id="plank" src="assets/models/wood_plank.glb"></a-asset-item>
+      <a-asset-item  id="plank" src="/assets/models/wood_plank.glb"></a-asset-item>
 
       <!--
         Title: Damage Door
@@ -47,11 +47,11 @@ function toggleDoor() {
         Model author: https://sketchfab.com/paburoviii
         Model license: CC BY 4.0 ( https://creativecommons.org/licenses/by/4.0/ )
       -->
-      <a-asset-item  id="door" src="assets/models/damage_door.glb"></a-asset-item>
+      <a-asset-item  id="door" src="/assets/models/damage_door.glb"></a-asset-item>
 
-      <img id="wall-texture" src="assets/textures/log_wall.jpeg">
-      <img id="roof-texture" src="assets/textures/roof_texture.jpeg">
-      <img id="floor-texture" src="assets/textures/wooden_floor.jpeg">
+      <img id="wall-texture" src="/assets/textures/log_wall.jpeg">
+      <img id="roof-texture" src="/assets/textures/roof_texture.jpeg">
+      <img id="floor-texture" src="/assets/textures/wooden_floor.jpeg">
     </a-assets>
 
     <template v-if="allAssetsLoaded">
