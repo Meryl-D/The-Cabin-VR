@@ -4,7 +4,7 @@ import TheAnchor from './TheAnchor.vue';
 
 <template>
     <a-entity
-        position="1.7 0 1.7"
+        position="1.3 0 1.3"
     >
         <a-box
             width="1"
