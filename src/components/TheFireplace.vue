@@ -3,7 +3,7 @@
 
 <template>
     <a-entity
-        position="0 0.32 -1.78"
+        position="0 0.32 -1.28"
     >
         <a-entity
             gltf-model="#fireplace"

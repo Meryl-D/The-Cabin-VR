@@ -9,54 +9,54 @@ import BaseRoof from './BaseRoof.vue';
 
         <!-- Front wall -->
         <BaseWall
-          position="0 1.5 -2"
+          position="0 1.5 -1.5"
         ></BaseWall>
 
         <!-- Right wall -->
         <BaseWall
-          position="2 1.5 0"
+          position="1.5 1.5 0"
           rotation="0 -90 0"
         ></BaseWall>
 
         <!-- Left wall -->
         <BaseWall
-          position="-2 1.5 0"
+          position="-1.5 1.5 0"
           rotation="0 90 0"
         ></BaseWall>
 
         <!-- Back wall -->
         <BaseWall
-          position="0 1.5 2"
+          position="0 1.5 1.5"
           rotation="0 180 0"
         ></BaseWall>
 
         <!-- Front roof -->
         <BaseRoof
-          position="0 3 -2"
+          position="0 3 -1.5"
         ></BaseRoof>
 
         <!-- Right roof -->
         <BaseRoof
-          position="2 3 0"
+          position="1.5 3 0"
           rotation="0 -90 0"
         ></BaseRoof>
 
         <!-- Left roof -->
         <BaseRoof
-          position="-2 3 0"
+          position="-1.5 3 0"
           rotation="0 90 0"
         ></BaseRoof>
 
         <!-- Back roof -->
         <BaseRoof
-          position="0 3 2"
+          position="0 3 1.5"
           rotation="0 180 0"
         ></BaseRoof>
 
         <!-- Floor -->
         <a-plane
-          width="4"
-          height="4"
+          width="3"
+          height="3"
           rotation="-90 0 0"
           src="#floor-texture"
           roughness="1"
@@ -67,7 +67,7 @@ import BaseRoof from './BaseRoof.vue';
         <!-- Door -->
         <a-entity
           gltf-model="#door"
-          position="1.97 0.9 -0.6"
+          position="1.47 0.9 -0.4"
           rotation="0 180 0"
           scale="0.008 0.008 0.008"
         ></a-entity>
@@ -76,7 +76,7 @@ import BaseRoof from './BaseRoof.vue';
         <a-entity
           gltf-model="#switch"
           rotation="0 -90 0"
-          position="1.98 0.9 0"
+          position="1.5 0.9 0"
           scale="0.6 0.6 0.6"
         ></a-entity>
 
