@@ -7,8 +7,8 @@
 
         <a-entity
             gltf-model="#table"
-            scale="0.3 0.3 0.3"
-            position="-1.44 1.1 1"
+            scale="0.27 0.27 0.27"
+            position="-1.565 0.851 1.204"
         ></a-entity>
 
     </a-entity>
