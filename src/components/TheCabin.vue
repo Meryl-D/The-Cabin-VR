@@ -67,9 +67,9 @@ import BaseRoof from './BaseRoof.vue';
         <!-- Door -->
         <a-entity
           gltf-model="#door"
-          position="1.9 1 -0.6"
+          position="1.97 0.9 -0.6"
           rotation="0 180 0"
-          scale="0.009 0.009 0.009"
+          scale="0.008 0.008 0.008"
         ></a-entity>
 
         <!-- Light switch -->
