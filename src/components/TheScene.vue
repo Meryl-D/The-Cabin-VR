@@ -77,6 +77,22 @@ function toggleDoor() {
       <a-asset-item  id="table" src="/assets/models/old_wooden_table.glb"></a-asset-item>
 
       <!--
+        Title: Old Wooden Table
+        Model source: https://sketchfab.com/3d-models/old-wooden-table-e53a5ef2faf84edcaddf49d4d27f366c
+        Model author: https://sketchfab.com/GameDevNick
+        Model license: CC BY 4.0 ( https://creativecommons.org/licenses/by/4.0/ )
+      -->
+      <a-asset-item  id="books" src="/assets/models/occult_books.glb"></a-asset-item>
+
+      <!--
+        Title: old ussr radio "Океан 214"
+        Model source: https://sketchfab.com/3d-models/old-ussr-radio-214-8fa526225e3e4c3eae4005e91d2b7938
+        Model author: https://sketchfab.com/Airmaster
+        Model license: CC BY 4.0 ( https://creativecommons.org/licenses/by/4.0/ )
+      -->
+      <a-asset-item  id="radio" src="/assets/models/radio.glb"></a-asset-item>
+
+      <!--
         Title: Door
         Model source: https://sketchfab.com/3d-models/door-d23ec435af454cf985292778dbd65c9e
         Model author: https://sketchfab.com/zian_0912
@@ -112,6 +128,9 @@ function toggleDoor() {
       <img id="roof-texture" src="/assets/textures/roof_texture.jpeg">
       <img id="floor-texture" src="/assets/textures/wooden_floor.jpeg">
       <img id="rust" src="/assets/textures/metal_rust.jpeg">
+
+      <a-asset-item id="door-rattle" response-type="arraybuffer" src="/assets/sounds/door_rattling.wav" preload="auto"></a-asset-item>
+      <a-asset-item id="light-switch" response-type="arraybuffer" src="/assets/sounds/light_switching.wav" preload="auto"></a-asset-item>
     </a-assets>
 
     <template v-if="allAssetsLoaded">
@@ -121,7 +140,7 @@ function toggleDoor() {
       <TheHatch/>
 
       <TheFireplace/>
-      
+
       <TheTable/>
 
     </template>

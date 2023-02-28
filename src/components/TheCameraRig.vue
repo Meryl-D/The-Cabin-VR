@@ -3,6 +3,7 @@
   import '../aframe/hide-in-vr';
   import '../aframe/simple-navmesh-constraint';
   import '../aframe/blink-controls';
+  import '../aframe/rotation-sync'
 
   import TheFlashLight from './TheFlashLight.vue';
 </script>
@@ -21,9 +22,14 @@
       camera
       position="0 1.65 0"
     > 
+    <a-entity
+      id="bag"
+      
+    > </a-entity>
+
       <the-flash-light 
         hide-in-vr
-        position="0.2 -0.4 -0.4"
+        position="-0.2 -0.4 -0.4"
       ></the-flash-light>
 
       <!-- Pointer -->
@@ -48,7 +54,11 @@
         collisionEntities: [data-role='nav-mesh'];
         snapTurn: false;
       "
-    ></a-entity>
+    >
+      <the-flash-light
+        scale="0.7 0.7 0.7"
+        position="0.03 -0.07 -0.12"
+      ></the-flash-light></a-entity>
 
     <a-entity
       id="hand-right"
@@ -56,10 +66,6 @@
       laser-controls="hand: right"
       raycaster="far: 2; objects: [clickable]; showLine: true;"
     >
-      <the-flash-light
-        scale="0.7 0.7 0.7"
-        position="-0.03 -0.07 -0.12"
-      ></the-flash-light>
     </a-entity>
 
   </a-entity>

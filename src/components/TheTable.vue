@@ -3,12 +3,27 @@
 </script>
 
 <template>
-    <a-entity>
+    <a-entity
+        position="-1.065 0.6 0.704"
+        scale="0.27 0.27 0.27"
+    >
 
         <a-entity
             gltf-model="#table"
-            scale="0.27 0.27 0.27"
-            position="-1.065 0.75 0.704"
+        ></a-entity>
+
+        <a-entity
+            gltf-model="#books"
+            scale="0.0025 0.0025 0.0025"
+            position="-1.2 0.1 2.8"
+            rotation="0 10 0"
+        ></a-entity>
+
+        <a-entity
+            gltf-model="#radio"
+            scale="0.001 0.001 0.001"
+            position="-0.4 0.482 -2"
+            rotation="0 60 0"
         ></a-entity>
 
     </a-entity>
