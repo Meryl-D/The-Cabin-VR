@@ -4,7 +4,7 @@
 
 <template>
     <a-entity
-        position="-1.065 0.6 0.704"
+        position="-1.065 0.8 0.704"
         scale="0.27 0.27 0.27"
     >
 
@@ -14,7 +14,7 @@
 
         <a-entity
             gltf-model="#books"
-            scale="0.0025 0.0025 0.0025"
+            scale="0.003 0.003 0.003"
             position="-1.2 0.1 2.8"
             rotation="0 10 0"
         ></a-entity>

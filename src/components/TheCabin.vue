@@ -21,7 +21,7 @@ function animateSwitch() {
           position="0 1.5 -1.5"
         >
         <!-- Pour le cloak, mettre les mêmes valeurs de taille que la box -->
-          <TheStach/>
+          <!-- <TheStach/> -->
           <!-- <a-box
             width="1"
             height="0.5"

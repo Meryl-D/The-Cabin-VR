@@ -13,11 +13,11 @@ import '../aframe/grabbable';
             scale="0.45 0.45 0.45"
         ></a-entity>
 
-        <!-- <a-entity
+        <a-entity
             gltf-model="#painting"
             position="0 0.9 -0.2"
             scale="0.007 0.007 0.007"
-        ></a-entity> -->
+        ></a-entity>
 
         <a-entity
             gltf-model="#binoculars"
