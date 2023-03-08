@@ -1,10 +1,21 @@
 <script setup>
+
+const props = defineProps({
+    width: {
+        type: Number,
+        default: 3
+    },
+    height: {
+        type: Number,
+        default: 3
+    }
+})
 </script>
 
 <template>
     <a-plane 
-        height="3"
-        width="3"
+        :height="props.height"
+        :width="props.width"
         src="#wall-texture"
         roughness="1"
         color="#978075"

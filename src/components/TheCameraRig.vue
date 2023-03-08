@@ -2,7 +2,6 @@
   import '../aframe/disable-in-vr';
   import '../aframe/hide-in-vr';
   import '../aframe/simple-navmesh-constraint';
-  import '../aframe/blink-controls';
   import '../aframe/rotation-sync'
 
   import TheFlashLight from './TheFlashLight.vue';
@@ -22,10 +21,24 @@
       camera
       position="0 1.65 0"
     > 
-    <a-entity
-      id="bag"
-      
-    > </a-entity>
+      <a-entity
+        position="0 0 -0.3"
+        visible="false"
+        event-set="target: #door-lock; event: openDoor; attribute: visible; value: true;"
+      >
+        <a-entity
+          position="0 0.006 0"
+          text="value: Congratulations!; align: center; width: 0.2; opacity: 0;"
+          listen-to="target: #door-lock; event: openDoor; emit: displayText;"
+          animation="property: text.opacity; to: 1; delay: 2000; startEvents: displayText;"
+        ></a-entity>
+        <a-entity
+        position="0 -0.006 0"
+        text="value: You escaped the cabin; align: center; width: 0.2; opacity: 0;"
+        listen-to="target: #door-lock; event: openDoor; emit: displayText;"
+        animation="property: text.opacity; to: 1; delay: 2000; startEvents: displayText;"
+        ></a-entity>
+      </a-entity>
 
       <the-flash-light 
         hide-in-vr
@@ -48,12 +61,6 @@
     <a-entity
       id="hand-left"
       hand-controls="hand: left; handModelStyle: lowPoly; color: #ffcccc"
-      blink-controls="
-        cameraRig: #camera-rig;
-        teleportOrigin: #head;
-        collisionEntities: [data-role='nav-mesh'];
-        snapTurn: false;
-      "
     >
       <the-flash-light
         scale="0.7 0.7 0.7"
@@ -63,10 +70,13 @@
     <a-entity
       id="hand-right"
       hand-controls="hand: right; handModelStyle: lowPoly; color: #ffcccc"
-      laser-controls="hand: right"
-      raycaster="far: 2; objects: [clickable]; showLine: true;"
     >
     </a-entity>
+
+    <!-- <a-entity
+    id="feet"
+    position=""
+    ></a-entity> -->
 
   </a-entity>
 </template>

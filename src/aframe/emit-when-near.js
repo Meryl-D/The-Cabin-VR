@@ -5,6 +5,7 @@ AFRAME.registerComponent('emit-when-near', {
     event: {type: 'string', default: 'click'},
     eventFar: {type: 'string', default: 'unclick'},
     throttle: {type: 'number', default: 100},
+    enabled: {type: 'boolean', default: true},
   },
 
   init: function () {
@@ -15,6 +16,7 @@ AFRAME.registerComponent('emit-when-near', {
   },
 
   checkDist: function () {
+    if (!this.data.enabled) return;
     this.el.object3D.getWorldPosition(this.myPos);
     this.data.target.object3D.getWorldPosition(this.targetPos);
     const distanceTo = this.myPos.distanceTo(this.targetPos);

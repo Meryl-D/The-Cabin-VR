@@ -1,10 +1,17 @@
 <script setup>
 import TheAnchor from './TheAnchor.vue';
+
+import '../aframe/emit-when-near'
+import '../aframe/listen-to'
 </script>
 
 <template>
     <a-entity
         position="0.8 0 1.3"
+        listen-to="target: #binoculars-entity; event: nearBinoculars; emit: hatchBanging;"
+        emit-when-near="target: #hand-right; distance: 1.5; event: hatchBanging; throttle: 500;"
+        animation="property: rotation; from: 0 0 0; to: 1 0 0; dir: alternate; loop: 6; dur: 150; startEvents: hatchBanging;"
+        sound="src: #hatch-banging; on: hatchBanging;"
     >
         <a-entity
             position="0 0 -0.5"

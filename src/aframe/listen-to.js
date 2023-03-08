@@ -6,6 +6,7 @@ AFRAME.registerComponent('listen-to', {
     emit: {type: 'string', default: 'click'},
   },
   init: function () {
+    if (!this.data.target) this.data.target = this.el;
     this.onEvent = this.onEvent.bind(this);
     this.data.target.addEventListener(this.data.event, this.onEvent);
   },

@@ -13,7 +13,7 @@ export default defineConfig(({command, mode}) => {
         },
       },
     })],
-    // base: '/meryl/' // pour chabloz.eu
+    base: '/meryl/' // pour chabloz.eu
   };
 
   return config;
