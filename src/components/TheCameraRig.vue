@@ -22,19 +22,19 @@
       position="0 1.65 0"
     > 
       <a-entity
-        position="0 0 -0.3"
+        position="0 0 -0.35"
         visible="false"
         event-set="target: #door-lock; event: openDoor; attribute: visible; value: true;"
       >
         <a-entity
           position="0 0.006 0"
-          text="value: Congratulations!; align: center; width: 0.2; opacity: 0;"
+          text="value: Congratulations!; align: center; width: 0.25; opacity: 0;"
           listen-to="target: #door-lock; event: openDoor; emit: displayText;"
           animation="property: text.opacity; to: 1; delay: 2000; startEvents: displayText;"
         ></a-entity>
         <a-entity
         position="0 -0.006 0"
-        text="value: You escaped the cabin; align: center; width: 0.2; opacity: 0;"
+        text="value: You escaped the cabin; align: center; width: 0.25; opacity: 0;"
         listen-to="target: #door-lock; event: openDoor; emit: displayText;"
         animation="property: text.opacity; to: 1; delay: 2000; startEvents: displayText;"
         ></a-entity>
