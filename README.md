@@ -1,8 +1,6 @@
 # The Cabin
 
----
-
-### A web vr escape room
+## A web vr escape room
 
 As you slowly regain consciousness, you realize that you are lying on a cold, hard floor in a small log cabin. You sit up, trying to get your bearings, but everything seems hazy and unfamiliar. You start to feel uneasy, sensing that you're not alone.
 
@@ -12,9 +10,7 @@ You find a flashlight on the ground and start to search the room as a means to e
 
 *The solution to the game is available in the solution.txt file*
 
----
-
-### Included in the game:
+## Included in the game:
 
 - aframe-extras controls and animation-mixer: https://github.com/c-frame/aframe-extras  (MIT License)
 - simple-navmesh-constraint: https://github.com/AdaRoseCannon/aframe-xr-boilerplate (MIT Licence)
