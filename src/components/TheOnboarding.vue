@@ -18,7 +18,7 @@
 <template>
   <div id="onboarding" v-if="showOnboarding">
     <div>
-      <h1>The cabin</h1>
+      <h1>The Cabin</h1>
       <p class="scenario">As you slowly regain consciousness, you realize that you are lying on a cold, hard floor in a small log cabin. You sit up, trying to get your bearings, but everything seems hazy and unfamiliar. You start to feel uneasy, sensing that you're not alone.</p>
       <p class="scenario">You find a flashlight on the ground and start to search the room as a means to escape.</p>
       <p class="scenario">(Touch to interact)</p>

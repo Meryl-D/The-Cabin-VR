@@ -1,4 +1,4 @@
-Solution to "The cabin"
+Solution to "The Cabin"
 
 • There are letters on multiple objects in the room that spells "fire". Push the button hidden in the fireplace.
 
