@@ -1,4 +1,4 @@
-Solution to "The Cabin"
+# Solution to "The Cabin"
 
 • There are letters on multiple objects in the room that spells "fire". Push the button hidden in the fireplace.
 
@@ -17,8 +17,8 @@ Solution to "The Cabin"
 • Take the door key inside the chest and escape the cabin.
 
 
-Note
-You can't grab an object when you are already holding somthing, but you can drop them in designated dropzone. These are identifiable thanks to their darker color and shape.
+### Note
+You can't grab an object when you are already holding something, but you can drop it in designated dropzone. These are identifiable thanks to their darker color (or lighter on walls) and shape.
 
 
 

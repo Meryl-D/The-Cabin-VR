@@ -8,7 +8,7 @@ You find a flashlight on the ground and start to search the room as a means to e
 
 (Touch to interact, interactions don't work in flat 3D)
 
-*The solution to the game is available in the solution.txt file*
+*The solution to the game is available in the solution.md file*
 
 ## Included in the game:
 
